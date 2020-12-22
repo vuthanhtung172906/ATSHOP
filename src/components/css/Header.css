@@ -1,0 +1,85 @@
+header{
+    min-height: 70px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    overflow: hidden;
+}
+header .logo a{
+    text-transform: uppercase;
+    text-decoration: none;
+    color: black
+}
+
+header nav{
+    display: flex
+}
+
+nav ul li{
+    list-style: none;
+    display: inline-block;
+}
+
+nav ul li a{
+    text-decoration: none;
+    padding:0 15px;
+    text-transform: uppercase;
+    color: black;
+    opacity: 0.7;
+}
+
+nav ul li a:hover{
+    color: lightseagreen
+}
+
+nav .nav-cart{
+    position: relative;
+    cursor: pointer;
+}
+
+nav .nav-cart span{
+    position: absolute;
+    top: -12px;
+    right: -10px;
+    background-color: crimson;
+    padding: 5px;
+    border-radius: 10px;
+    color: white;
+    font-size: 10px;
+    z-index: -1;
+}
+
+header .menu,
+header .close{
+    cursor: pointer;
+    display: none;
+}
+@media (max-width: 650px){
+    header ul{
+        position:fixed;
+        display: flex;
+        left: 0;
+        top: -100%;
+        width: 100%;
+        height: 100vh;
+        justify-content: space-around;
+        flex-direction: column;
+        align-items: center;
+        background: white; 
+        opacity: 0.96;
+        z-index: 99;
+        transition: 0.5s linear;
+    }
+    header .close,
+    header .menu{
+        display: block;
+    }
+    header .close{
+        position:absolute;
+        top: 10px;
+        right: 20px;
+    }
+    header ul.toggle{
+        top: 0
+    }
+}
