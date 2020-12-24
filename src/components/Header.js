@@ -4,7 +4,7 @@ import Menu from './svg/bars-solid.svg'
 import Cart from './svg/shopping-cart-solid.svg'
 import Close from './svg/times-solid.svg'
 import './css/Header.css'
-
+import {DataContext} from "./Context"
 class Header extends Component {
     state = {
         toggle : false
@@ -14,7 +14,9 @@ class Header extends Component {
             toggle: !this.state.toggle
         })
     }
+    static contextType = DataContext;
     render() {
+        const {cart} = this.context;
         return (
             <header> 
                 <div className="menu" onClick={this.clickToggle}>
@@ -26,14 +28,14 @@ class Header extends Component {
                 <nav>
                     <ul className={this.state.toggle ? "toggle" : ''}>
                         <li><Link to="/">Home</Link></li>
-                        <li><Link to="/">Product</Link></li>
-                        <li><Link to="/">Contact</Link></li>
-                        <li><Link to="/">About</Link></li>
-                        <li><Link to="/">Login/Register</Link></li>
+                        <li><Link to="/product">Product</Link></li>
+                        <li><Link to="/contact">Contact</Link></li>
+                        <li><Link to="/about">About</Link></li>
+                        <li><Link to="/login">Login/Register</Link></li>
                         <li className = "close"><img src={Close} width="20" alt="" onClick={this.clickToggle}/></li>
                     </ul>
                     <div className="nav-cart">
-                        <span>0</span>
+                        <span>{cart.length}</span>
                         <Link to="/cart">
                             <img src={Cart} alt = '' width="20"/>
                         </Link>

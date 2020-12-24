@@ -1,0 +1,52 @@
+.details{
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0;
+    flex-wrap: wrap;
+}
+.details img {
+    width: 100%;
+    max-width: 500px;
+    min-width: 290px;
+    object-fit: cover;
+    display: block;
+}
+
+.details .box{
+    max-width: 500px;
+    min-width: 290px;
+    margin-top: 20px;
+}
+
+.box .row{
+    display: flex;
+    justify-content: space-between;
+}
+.box .row h2{
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+.box .row span{
+    color: crimson;
+}
+.box .colors button{
+    height: 25px;
+    width: 25px;
+    margin: 3px 5px;
+    border-radius: 5px;
+    cursor: pointer;
+    opacity: 0.8;
+}
+.box  p {
+    line-height: 25px;
+    margin: 15px 0
+}
+.box .cart{
+    text-decoration: none;
+    background-color: #333;
+    color: white;
+    padding: 15px 20px;
+    text-transform: uppercase;
+    display: inline-block;
+    letter-spacing: 2px;
+}

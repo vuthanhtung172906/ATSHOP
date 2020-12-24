@@ -22,7 +22,7 @@ export class Products extends Component {
                                 </h3>
                                 <span>${product.price}</span>
                                 <p>{product.description}</p>
-                                <button>Add to cart</button>
+                                <button onClick={()=>this.context.addCart(product._id)}>Add to cart</button>
                             </div>
                         </div>
                     ))

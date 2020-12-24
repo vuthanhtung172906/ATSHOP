@@ -64,12 +64,95 @@ export class DataProvider extends Component {
                 "colors":["orange","black","crimson","teal"],
                 "count": 1
             }
-        ]
+        ],
+        cart :[
+
+        ],
+        totalBill : 0
+
+    }
+    addCart = (id)=>{
+        const {products , cart} = this.state;
+        const check = cart.every(item =>{
+            return item._id !== id
+        })
+        if(check){
+            const data = products.filter((product, index)=>{
+                return product._id === id
+            })
+            this.setState({
+                cart: [...cart , ...data]
+            })
+        }else{
+            alert("Product has been added to Cart")
+        }
+
+    };
+
+    reduction = (id)=>{
+        const {cart} = this.state;
+        cart.forEach((item)=>{
+            if(item._id === id){
+                item.count === 1 ? item.count =1 : item.count -=1;
+            }
+        })
+        this.setState({
+            cart: cart 
+        })
+        this.getBill();
+
+    };
+    increasion = (id)=>{
+        const {cart} = this.state;
+        cart.forEach((item)=>{
+            if(item._id === id){
+                item.count +=1;
+            }
+        })
+        this.setState({
+            cart: cart 
+        })
+        this.getBill();
+    };
+    getBill = ()=>{
+        const {cart} = this.state;
+        const res = cart.reduce((total , item)=>{
+            return total + item.price * item.count;
+        }, 0)
+        this.setState({totalBill: res})
+    };
+    deleteitem = (id)=>{
+        if(window.confirm("Are you sure want to delete this ?")){
+            const {cart} = this.state;
+            cart.forEach((item,index) =>{
+                if(item._id === id){
+                    cart.splice(index, 1)
+                }
+            })
+            this.setState({cart: cart})
+            this.getBill();
+        }
+
+    };
+    componentDidUpdate(){
+        localStorage.setItem('dataCart' , JSON.stringify(this.state.cart));
+        localStorage.setItem('dataTotal', JSON.stringify(this.state.totalBill))
+    }
+    componentDidMount(){
+        const dataCart = JSON.parse(localStorage.getItem('dataCart'));
+        if(dataCart !== null){
+            this.setState({cart: dataCart})
+        }
+        const totalBill = JSON.parse(localStorage.getItem('dataTotal'));
+        if(totalBill !== null){
+            this.setState({totalBill: totalBill})
+        }
     }
     render() {
-        const {products} = this.state;
+        const {products,cart,totalBill} = this.state;
+        const {addCart, reduction ,getBill, increasion ,deleteitem} = this
         return (
-            <DataContext.Provider value = {{products}}>
+            <DataContext.Provider value = {{products,getBill,cart,totalBill,reduction,increasion,deleteitem, addCart}}>
                 {this.props.children}
             </DataContext.Provider>
         )
