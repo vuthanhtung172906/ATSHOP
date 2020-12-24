@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/ATSHOP/static/css/main.856d680b.chunk.css",
+    "main.js": "/ATSHOP/static/js/main.922c41d8.chunk.js",
+    "main.js.map": "/ATSHOP/static/js/main.922c41d8.chunk.js.map",
+    "runtime-main.js": "/ATSHOP/static/js/runtime-main.cb3bac61.js",
+    "runtime-main.js.map": "/ATSHOP/static/js/runtime-main.cb3bac61.js.map",
+    "static/js/2.108e0293.chunk.js": "/ATSHOP/static/js/2.108e0293.chunk.js",
+    "static/js/2.108e0293.chunk.js.map": "/ATSHOP/static/js/2.108e0293.chunk.js.map",
+    "static/js/3.703e0d17.chunk.js": "/ATSHOP/static/js/3.703e0d17.chunk.js",
+    "static/js/3.703e0d17.chunk.js.map": "/ATSHOP/static/js/3.703e0d17.chunk.js.map",
+    "index.html": "/ATSHOP/index.html",
+    "static/css/main.856d680b.chunk.css.map": "/ATSHOP/static/css/main.856d680b.chunk.css.map",
+    "static/js/2.108e0293.chunk.js.LICENSE.txt": "/ATSHOP/static/js/2.108e0293.chunk.js.LICENSE.txt",
+    "static/media/bars-solid.e8db7520.svg": "/ATSHOP/static/media/bars-solid.e8db7520.svg",
+    "static/media/shopping-cart-solid.d146d6c3.svg": "/ATSHOP/static/media/shopping-cart-solid.d146d6c3.svg",
+    "static/media/times-solid.ea7c95d7.svg": "/ATSHOP/static/media/times-solid.ea7c95d7.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cb3bac61.js",
+    "static/js/2.108e0293.chunk.js",
+    "static/css/main.856d680b.chunk.css",
+    "static/js/main.922c41d8.chunk.js"
+  ]
+}
