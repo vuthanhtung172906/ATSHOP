@@ -10,14 +10,14 @@ export class Sections extends Component {
         return (
             <section>
                 <Route path="/ATSHOP" component={Products} exact/>
-                <Route path="/" component={Products} exact/>
-                <Route path="/product" component={Products} exact/>
-                <Route path="/product/:id" component={Details}/>
-                <Route path="/cart" component={Cart} />
-                <Route path="/Payment" component={Payment} />
-                <Route path="/about" component={NothingPage} />
-                <Route path="/contact" component={NothingPage} />
-                <Route path="/login" component={NothingPage} />
+                <Route path="/ATSHOP" component={Products} exact/>
+                <Route path="/ATSHOP/product" component={Products} exact/>
+                <Route path="/ATSHOP/product/:id" component={Details}/>
+                <Route path="/ATSHOP/cart" component={Cart} />
+                <Route path="/ATSHOP/Payment" component={Payment} />
+                <Route path="/ATSHOP/about" component={NothingPage} />
+                <Route path="/ATSHOP/contact" component={NothingPage} />
+                <Route path="/ATSHOP/login" component={NothingPage} />
             </section>
         )
     }

@@ -39,7 +39,7 @@ export class Details extends Component {
                             <Colors item = {item}/>
                             <p>{item.description}</p>
                             <p>{item.content}</p>
-                            <Link to="/cart" className="cart" onClick={()=>{addCart(item._id)}}>
+                            <Link to="/ATSHOP/cart" className="cart" onClick={()=>{addCart(item._id)}}>
                             Add to cart
                             </Link>
                         </div>
