@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/ATSHOP/static/css/main.856d680b.chunk.css",
-    "main.js": "/ATSHOP/static/js/main.922c41d8.chunk.js",
-    "main.js.map": "/ATSHOP/static/js/main.922c41d8.chunk.js.map",
+    "main.js": "/ATSHOP/static/js/main.a0122835.chunk.js",
+    "main.js.map": "/ATSHOP/static/js/main.a0122835.chunk.js.map",
     "runtime-main.js": "/ATSHOP/static/js/runtime-main.cb3bac61.js",
     "runtime-main.js.map": "/ATSHOP/static/js/runtime-main.cb3bac61.js.map",
     "static/js/2.108e0293.chunk.js": "/ATSHOP/static/js/2.108e0293.chunk.js",
@@ -20,6 +20,6 @@
     "static/js/runtime-main.cb3bac61.js",
     "static/js/2.108e0293.chunk.js",
     "static/css/main.856d680b.chunk.css",
-    "static/js/main.922c41d8.chunk.js"
+    "static/js/main.a0122835.chunk.js"
   ]
 }
